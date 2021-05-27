@@ -1,8 +1,8 @@
-const   path =                              require('path');
-                                            require('update-electron-app')();
-const { app, autoUpdater, BrowserWindow } = require('electron');
+const   path =                 require('path');
+                               require('update-electron-app')();
+const { app, BrowserWindow } = require('electron');
 
-// [autoUpdater] update request
+/* [autoUpdater] update request
 autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
 const dialogOpts = {
 type   :  'info',
@@ -15,7 +15,7 @@ if (returnValue.response === 0) autoUpdater.quitAndInstall(); } ) } );
 // [autoUpdater] error handling
 autoUpdater.on('error', message => {
 console.error('There was a problem updating the application');
-console.error(message); } );
+console.error(message); } ); */
 
 function createWindow() {
 // __dirname points to the path of the currently executing script
