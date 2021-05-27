@@ -1,5 +1,5 @@
 const   path =                 require('path');
-                               require('update-electron-app')( { host: 'https://github.com' } );
+                               require('update-electron-app')();
 const { app, BrowserWindow } = require('electron');
 
 /* [autoUpdater] update request
