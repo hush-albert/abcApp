@@ -9,7 +9,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
-  "repository": "https://github.com/hush-albert/abcApp",
+  "repository": "hush-albert/abcApp",
   "author": "Albert",
   "license": "ISC",
   "devDependencies": {
