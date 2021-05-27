@@ -1,6 +1,6 @@
 {
   "name": "abcapp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "abcApp",
   "main": "main.js",
   "scripts": {
@@ -9,6 +9,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
+  "repository": "https://github.com/hush-albert/abcApp",
   "author": "Albert",
   "license": "ISC",
   "devDependencies": {

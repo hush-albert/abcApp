@@ -1,8 +1,21 @@
-const path = require('path');
-require('update-electron-app')();
+const   path =                              require('path');
+                                            require('update-electron-app')();
 const { app, autoUpdater, BrowserWindow } = require('electron');
 
-console.log(autoUpdater.getFeedURL);
+// [autoUpdater] update request
+autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
+const dialogOpts = {
+type   :  'info',
+buttons: ['Restart', 'Later'],
+title  :  'Application Update',
+message:   process.platform === 'win32' ? releaseNotes : releaseName,
+detail :  'A new version has been downloaded. Restart the application to apply the updates.' };
+dialog.showMessageBox(dialogOpts).then((returnValue) => {
+if (returnValue.response === 0) autoUpdater.quitAndInstall(); } ) } );
+// [autoUpdater] error handling
+autoUpdater.on('error', message => {
+console.error('There was a problem updating the application');
+console.error(message); } );
 
 function createWindow() {
 // __dirname points to the path of the currently executing script
